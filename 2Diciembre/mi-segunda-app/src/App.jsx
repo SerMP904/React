@@ -3,7 +3,7 @@ import CabeceraTiendaComponent from './components/CabeceraTiendaComponent';
 
 
 function App() {
-  const tituloTienda = CabeceraTiendaComponent
+  const tituloTienda = "hola esto es una tienda"
   const data = [ {
     id: 1,
     title: "Libro 1",
@@ -39,7 +39,7 @@ function App() {
   return (
     <>
     <div>
-    <h1>{tituloTienda}</h1>
+    <CabeceraTiendaComponent />
     </div>
     <div>{data.map((libro, index) =>{
       const precioConIva = libro.price+libro.IVA;
