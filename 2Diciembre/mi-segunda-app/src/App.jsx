@@ -1,7 +1,9 @@
 import './App.css'
+import CabeceraTiendaComponent from './components/CabeceraTiendaComponent';
+
 
 function App() {
-  const tituloTienda = "Mi primera librería en React"
+  const tituloTienda = CabeceraTiendaComponent
   const data = [ {
     id: 1,
     title: "Libro 1",
@@ -25,7 +27,14 @@ function App() {
     price: 20,
     IVA: 2,
     premium: true,
-  }]
+  },{
+     id: 4,
+     title: 'Libro 4',
+     description: 'Descripcion del libro 4',
+     price: 20,
+     IVA: 4,
+     premium: false
+   }]
 
   return (
     <>
@@ -40,6 +49,7 @@ function App() {
       <p>Desc: {libro.description}</p>
       <p>Price: {libro.price}</p>
       <p>Precio con Iva: {precioConIva}</p>
+      <p>Premium: {libro.premium ? 'Sí' : 'No'}</p>
       <hr />
       </div>)
     })}</div>
