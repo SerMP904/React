@@ -53,10 +53,6 @@ function App() {
       <hr />
       </div>)
     })}</div>
-    <div>
-      const dataAPintar = data[1];
-      <p></p>
-    </div>
     </>
   )
 }
