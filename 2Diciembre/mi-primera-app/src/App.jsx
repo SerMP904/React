@@ -12,6 +12,8 @@ function App() {
     <p>{subtitulo}</p>
     <hr />
     <HolaMundoComponent />
+    <HolaMundoComponent />
+    <HolaMundoComponent />
     <hr />
     <FraseCelebreComponent />
     </>
