@@ -1,4 +1,4 @@
-import InfoLibroPage from './components/InfoLibroComponent'
+import InfoLibroPage from './pages/InfoLibroPage'
 import './App.css'
 
 function App() {

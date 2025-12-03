@@ -21,7 +21,7 @@ const infoLibroPage = () => {
     },
   ];
   const reviewList = [
-    ({
+    {
       name: "Eda",
       review:
         "Aliquam assumenda dignissimos eum quo ut similique sapiente. Et et tempore debitis praesentium pariatur ad eum. Autem a sed sit eos quasi assumenda. Consequatur sint suscipit eos eaque assumenda.",
@@ -44,23 +44,61 @@ const infoLibroPage = () => {
       review:
         "Rerum autem omnis. Perspiciatis qui recusandae est ratione accusamus. Deleniti animi omnis dolorem maiores delectus eveniet et fugiat. Fugiat et sed sapiente voluptatum voluptatem quis et laborum.",
       created_at: "2024-06-27T15:13:02.845Z",
-    })
+    }
   ];
-  return <div>
-    <div>
-    <h1>Información del Libro</h1>
-    </div>
-    <hr />
-    <div>
+  return (
+    <>
+      <div>
+        <h1>Información del Libro</h1>
+      </div>
+      <hr />
+  
+      <div>
         <h2>Informacion del Libro</h2>
         <div>
-            <p>Título: {infoLibro.title}</p>
-            <p>ISBN: {infoLibro.ISBN}</p>
-            <p>Autor: {infoLibro.author}</p>
-            <p>Sinopsis: {infoLibro.description}</p>
+          <p>Título: {infoLibro.title}</p>
+          <p>ISBN: {infoLibro.ISBN}</p>
+          <p>Autor: {infoLibro.author}</p>
+          <p>Sinopsis: {infoLibro.description}</p>
         </div>
-    </div>
-  </div>;
+  
+        <hr />
+  
+        <div>
+          <h2>Lugares de ventas</h2>
+          <div>
+            {listaTiendas.map((tienda, idx) => {
+              return (
+                <div key={idx}>
+                  <h4>Lugar: {tienda.name}</h4>
+                  <p>Dirección: {tienda.address}</p>
+                  <hr />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+  
+        <hr />
+  
+        <div>
+          <h2>Reseñas</h2>
+          <div>
+            {reviewList.map((resena, idx) => {
+              return (
+                <div key={idx}>
+                  <h4>Nombre: {resena.name}</h4>
+                  <p>Fecha: {resena.created_at}</p>
+                  <p>Reseña: {resena.review}</p>
+                  <hr />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default infoLibroPage;
