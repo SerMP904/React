@@ -1,21 +1,22 @@
 import React from 'react'
+import TarjetaResenyaComponent from "./TarjetaResenyaComponent"
 
 const ReviewLibroComponent = (props) => {
-    const {infoReview} = props
+    const {infoReview, numeroResenyas, tituloSeccion} = props
+
+    console.log(infoReview)
     return (
         <div>
-        <h2>Reseñas</h2>
+        <h2>{tituloSeccion}</h2>
         <div>
-          {infoReview.map((resena, idx) => {
-            return (
-              <div key={idx}>
-                <h4>Nombre: {resena.name}</h4>
-                <p>Fecha: {resena.created_at}</p>
-                <p>Reseña: {resena.review}</p>
-                <hr />
-              </div>
-            );
-          })}
+          
+          {infoReview.map((resenya, idx) =>(
+            <TarjetaResenyaComponent resenya={resenya} index={idx}/>
+          ) )}
+          <div>
+          <h4>Número reseñas</h4>
+          <p>Total de reseñas: {numeroResenyas}</p>
+          </div>
         </div>
         </div>
   )

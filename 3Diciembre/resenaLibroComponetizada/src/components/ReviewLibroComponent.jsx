@@ -25,7 +25,11 @@ const ReviewLibroComponent = () => {
           review:
             "Rerum autem omnis. Perspiciatis qui recusandae est ratione accusamus. Deleniti animi omnis dolorem maiores delectus eveniet et fugiat. Fugiat et sed sapiente voluptatum voluptatem quis et laborum.",
           created_at: "2024-06-27T15:13:02.845Z",
-        },
+        },{
+          name: "Señor X",
+          review: "Una poronga",
+          created_at: "2025-06-27T15:13:02.845Z"
+        }
       ];
     return (
         <div>

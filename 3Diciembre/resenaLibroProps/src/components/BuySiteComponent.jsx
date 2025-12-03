@@ -9,8 +9,7 @@ const BuySiteComponent = (props) => {
           {infoTienda.map((tienda, idx) => {
             return (
               <div key={idx}>
-                <h4>Lugar: {tienda.name}</h4>
-                <p>Dirección: {tienda.address}</p>
+                <p>Lugar: <b>{tienda.name}</b>, Dirección: {tienda.address}</p>
                 <hr />
               </div>
             );
