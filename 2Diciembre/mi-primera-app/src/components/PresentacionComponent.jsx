@@ -2,7 +2,7 @@ const PresentacionComponent = () => {
     return (
       <div>
         <h2>Presentación</h2>
-        <p>Mi nombre es [tu nombre] y este es mi primer componente en React.</p>
+        <p>Mi nombre es Sergio y este es mi primer componente en React.</p>
       </div>
     )
   }
