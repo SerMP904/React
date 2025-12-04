@@ -12,6 +12,9 @@ function App() {
 
   const [edad, setEdad] = useState(18)
   const [name, setName] = useState("")
+  const display = name === "" ? "No": "Nombre"
+  const resultado = display === "Nombre" ? "Estás escribiendo.. " + name : "No hay nada escrito"
+  
 
   return (
     <>
@@ -19,14 +22,14 @@ function App() {
         <h3>Nombre sin useState: {nombreSinUseState}</h3>
         <div>
           <span>Nombre: </span>
-          <input type="text" onChange={(event) => cambioNombre(event.target.value)}/>
+          <input type="text" placeholder={"No hay nada escrito"} onChange={(event) => {cambioNombre("estás escribiendo" + event.target.value)}}/>
         </div>
       </div>
       <div>
-        <h3>Nombre con useState: {name}</h3>
+        <h3>Nombre con useState: {resultado}</h3>
         <div>
           <span>Nombre: </span>
-          <input type="text" onChange={(event) => setName(event.target.value)}/>
+          <input type="text" placeholder={"No hay nada escrito"} onChange={(event) => {setName(event.target.value)}}/>
         </div>
         <div>
           <h2>Edad actual: {edad} años</h2>
