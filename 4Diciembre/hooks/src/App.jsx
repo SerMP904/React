@@ -10,6 +10,7 @@ function App() {
     console.log("Nombre:", nombreSinUseState)
   }
 
+  const [edad, setEdad] = useState(18)
   const [name, setName] = useState("")
 
   return (
@@ -26,6 +27,11 @@ function App() {
         <div>
           <span>Nombre: </span>
           <input type="text" onChange={(event) => setName(event.target.value)}/>
+        </div>
+        <div>
+          <h2>Edad actual: {edad} años</h2>
+          <button onClick={() => setEdad(21)}>Tener 21 años</button>
+          <button onClick={() => setEdad(edad+1)}>Envejecer poco</button>
         </div>
       </div>
     </>

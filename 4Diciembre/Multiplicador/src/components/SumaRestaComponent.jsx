@@ -4,7 +4,8 @@ import { useState } from "react";
 const SumaRestaComponent = () => {
   const [num1, setNum1] = useState(0);
   const [num2, setNum2] = useState(0);
-  const [mode, setMode] = useState(0)
+  const [mode, setMode] = useState(0);
+  console.log(mode)
   const modeDisplay = mode % 2 === 0 ? "Sumar" : "Restar";
   const resultado = modeDisplay === "Sumar" ? num1 + num2 : num1 - num2;
 
