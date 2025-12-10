@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import './App.css'
 import MainLayout from './layout/MainLayout'
 import HomePage from './pages/HomePage'
+import ContactPage from './pages/ContactPage'
 
 function App() {
 
@@ -10,9 +11,9 @@ function App() {
     <>
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage/>}>
-          <Route path="/" element={<MainLayout/>}/>
-          <Route path="/contact" element={<HomePage/>}/>
+        <Route path="/" element={<MainLayout/>}>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/contact" element={<ContactPage/>}/>
         </Route>
       </Routes>
       </BrowserRouter>

@@ -2,7 +2,12 @@ import React from 'react'
 
 const HeaderComponent = () => {
   return (
-    <div>HeaderComponent</div>
+    <div>
+      <div>
+        <h2>Esto está arriba</h2>
+      <span>Esto es un header</span>
+      </div>
+      </div>
   )
 }
 
